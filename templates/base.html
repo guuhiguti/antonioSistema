@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/base.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.png') }}" type="image/x-icon">
+    <title>{% block title %} Antônio Carlos {% endblock %}</title>
+</head>
+<body>
+    <nav>
+        <ul>
+            <a href="{{ url_for('home.home') }}">INÍCIO</a>
+            <a href="{{ url_for('clientes.clientes') }}">CADASTRO DE CLIENTES</a>
+            <a href="{{ url_for('produtos.produtos') }}">CADASTRO DE PRODUTOS</a>
+            <a href="{{ url_for('produtos.estoque') }}">ESTOQUE</a>
+            <a href="{{ url_for('pedidos.pedidos') }}">PEDIDOS</a>
+        </ul>
+    </nav>
+    {% block content %}{% endblock %}
+</body>
+</html>

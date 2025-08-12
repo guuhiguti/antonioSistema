@@ -3,12 +3,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Antônio Sistema</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/index.css') }}">
+    <link rel="shortcut icon" href="{{ url_for('static', filename='img/favicon.png') }}" type="image/x-icon">
+    <title>{% block title %} Antônio Carlos {% endblock %}</title>
 </head>
 <body>
-    <h1>ANTÔNIO CARLOS</h1>
-
-     <div>
+    <h1>ANTÔNIO CARLOS</h1> 
+    <div class="menu">
         <a href="{{ url_for('clientes.clientes') }}"><button>CADASTRO DE CLIENTES</button></a>
         <a href="{{ url_for('produtos.produtos') }}"><button>CADASTRO DE PRODUTOS</button></a>
         <a href="{{ url_for('produtos.estoque') }}"><button>ESTOQUE</button></a>
